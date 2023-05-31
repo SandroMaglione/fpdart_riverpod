@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:fpdart_riverpod/core/router/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final _appRouter = AppRouter();
+
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return MaterialApp.router(
+      title: 'Fpdart + Riverpod @SandroMaglione',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Placeholder(),
+      routerConfig: _appRouter.config(),
     );
   }
 }
