@@ -1,10 +1,8 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:fpdart_riverpod/datasources/get_all_event/get_all_event_state.dart';
 import 'package:fpdart_riverpod/providers/event_list_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-@RoutePage()
 class HomePage extends HookConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
 
