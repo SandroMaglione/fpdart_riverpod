@@ -8,7 +8,6 @@ environment:
 
 dependencies:
   equatable: ^2.0.5
-  fast_immutable_collections: ^9.1.3
   flutter:
     sdk: flutter
   flutter_hooks: ^0.18.6

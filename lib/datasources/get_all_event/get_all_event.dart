@@ -1,4 +1,3 @@
-import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:fpdart_riverpod/datasources/get_all_event/get_all_event_state.dart';
 import 'package:fpdart_riverpod/entities/event_entity.dart';
@@ -21,7 +20,7 @@ final getAllEvent = ReaderTask<StorageService, GetAllEventState>.Do(
         executeQuery,
       ).match(
         identity,
-        (list) => SuccessGetAllEventState(list.lock),
+        SuccessGetAllEventState.new,
       ),
     );
   },

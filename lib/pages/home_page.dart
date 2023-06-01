@@ -19,13 +19,11 @@ class HomePage extends HookConsumerWidget {
             SuccessGetAllEventState(eventEntity: final eventEntity) => Column(
                 children: [
                   Text('${eventEntity.length} length'),
-                  ...eventEntity
-                      .map(
-                        (eventModel) => Card(
-                          child: Text(eventModel.title),
-                        ),
-                      )
-                      .toList()
+                  ...eventEntity.map(
+                    (eventModel) => Card(
+                      child: Text(eventModel.title),
+                    ),
+                  )
                 ],
               )
           },
