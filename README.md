@@ -10,7 +10,7 @@
   </a>
 </p>
 
-Learn how to use [`fpdart`](https://pub.dev/packages/fpdart) and [`riverpod`](https://pub.dev/packages/riverpod) to implement a **safe**, **maintainable**, and **testable** flutter apps.
+Learn how to use [`fpdart`](https://pub.dev/packages/fpdart) and [`riverpod`](https://pub.dev/packages/riverpod) to implement a **safe**, **maintainable**, and **testable** flutter app.
 
 This repository contains the source code for the course [**Fpdart & Riverpod - Safe, maintainable, testable Flutter apps**](https://www.sandromaglione.com/course/fpdart-riverpod-develop-flutter-app).
 
