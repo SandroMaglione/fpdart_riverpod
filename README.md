@@ -57,7 +57,13 @@ dev_dependencies:
   riverpod_generator: ^2.2.3
 ```
 
-You can run the app in every platform (mobile, web, desktop, it's Flutter after all 🎯):
+You also need to execute [`build_runner`](https://pub.dev/packages/build_runner) to generate the providers using [`riverpod_generator`](https://pub.dev/packages/riverpod_generator):
+
+```shell
+dart run build_runner build
+```
+
+You can then run the app in every platform (mobile, web, desktop, it's Flutter after all 🎯):
 
 ```shell
 flutter run
