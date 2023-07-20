@@ -7,8 +7,8 @@ part 'event_list_provider.g.dart';
 
 @riverpod
 Future<GetAllEventState> eventList(EventListRef ref) async {
-  final service = await ref.watch(
-    storageServiceProvider.future,
+  final service = ref.watch(
+    storageServiceProvider,
   );
   return getAllEvent.run(service);
 }

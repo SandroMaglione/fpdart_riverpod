@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'storage_service_provider.g.dart';
 
 @riverpod
-Future<StorageService> storageService(StorageServiceRef ref) async {
+StorageService storageService(StorageServiceRef ref) {
   /// Return concrete instance of [StorageService]
   throw UnimplementedError();
 }

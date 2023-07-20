@@ -14,7 +14,7 @@ class HomePage extends HookConsumerWidget {
         body: eventList.map(
           loading: (_) => const Text('Loading...'),
           error: (error) => Text("Error: $error"),
-          data: (list) => switch (list.value) {
+          data: (data) => switch (data.value) {
             QueryGetAllEventError() => const Text("Empty"),
             SuccessGetAllEventState(eventEntity: final eventEntity) => Column(
                 children: [
