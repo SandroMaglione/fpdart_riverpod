@@ -3,17 +3,17 @@ import 'package:fpdart_riverpod/datasources/get_all_event/get_all_event_state.da
 import 'package:fpdart_riverpod/services/storage_service.dart';
 
 final getAllEvent = ReaderTask<StorageService, GetAllEventState>.Do(
-  ($) async {
-    final executeQuery = await $(
+  (_) async {
+    final executeQuery = await _(
       ReaderTask(
-        (repository) async => TaskEither.tryCatch(
-          () => repository.getAll,
+        (storageService) async => TaskEither.tryCatch(
+          () => storageService.getAll,
           QueryGetAllEventError.new,
         ),
       ),
     );
 
-    return $(
+    return _(
       ReaderTask(
         (_) => executeQuery
             .match(
@@ -24,4 +24,16 @@ final getAllEvent = ReaderTask<StorageService, GetAllEventState>.Do(
       ),
     );
   },
+);
+
+final getAllEventChain = ReaderTask(
+  (StorageService storageService) => TaskEither.tryCatch(
+    () => storageService.getAll,
+    QueryGetAllEventError.new,
+  )
+      .match(
+        identity,
+        SuccessGetAllEventState.new,
+      )
+      .run(),
 );
