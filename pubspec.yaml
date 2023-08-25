@@ -13,6 +13,7 @@ dependencies:
   fpdart: ^1.0.0-beta.1
   hooks_riverpod: ^2.3.6
   riverpod_annotation: ^2.1.1
+  mocktail: ^1.0.0
 
 dev_dependencies:
   flutter_test:
