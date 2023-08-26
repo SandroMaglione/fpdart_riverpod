@@ -39,10 +39,11 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  equatable: ^2.0.5
   flutter:
     sdk: flutter
-  fpdart: ^1.0.0-beta.1
+    
+  equatable: ^2.0.5
+  fpdart: ^1.1.0
   hooks_riverpod: ^2.3.6
   riverpod_annotation: ^2.1.1
 
@@ -55,6 +56,7 @@ dev_dependencies:
   custom_lint: ^0.4.0
   riverpod_lint: ^1.3.2
   riverpod_generator: ^2.2.3
+  mocktail: ^1.0.0
 ```
 
 You also need to execute [`build_runner`](https://pub.dev/packages/build_runner) to generate the providers using [`riverpod_generator`](https://pub.dev/packages/riverpod_generator):
